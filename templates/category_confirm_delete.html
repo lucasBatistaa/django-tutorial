@@ -1,0 +1,6 @@
+<h4>Excluir Categoria: {{  object.name }}</h4>
+<form method="post">
+    {% csrf_token %}
+    Tem certeza que deseja excluir esta categoria? 
+    <input type="submit" value="Sim, excluir!"></input>
+</form>

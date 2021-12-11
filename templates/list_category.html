@@ -1,0 +1,20 @@
+<h4>Categorias</h4>
+<ul>
+    {% for category in categories %}
+        <li> 
+            {{ category.name }}
+            &nbsp;|&nbsp;
+            <a href="{% url 'category_detail' category.id %}">
+                Ver
+            </a>
+            &nbsp;|&nbsp;
+            <a href="{% url 'category_update' category.id %}">
+                Editar
+            </a>
+            &nbsp;|&nbsp;
+            <a href="{% url 'category_delete' category.id %}">
+                Excluir
+            </a>
+        </li>
+    {% endfor %}
+</ul>
